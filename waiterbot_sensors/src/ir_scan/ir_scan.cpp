@@ -135,7 +135,7 @@ namespace waiterbot
 
     scan.angle_min = -M_PI/2.0;
     scan.angle_max = +M_PI/2.0;
-    scan.angle_increment = M_PI/10.0;
+    scan.angle_increment = (scan.angle_max - scan.angle_min) / (double)(rangers_count - 1);
     scan.scan_time = 1.0 / read_frequency;
     scan.range_min = 0.10 + ir_ring_radius;
     scan.range_max = 11.00 + ir_ring_radius;
