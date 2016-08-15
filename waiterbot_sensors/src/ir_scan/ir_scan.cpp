@@ -133,8 +133,8 @@ namespace waiterbot
     scan.ranges.resize(rangers_count, 0.0);
     scan.intensities.resize(rangers_count, 0.0);
 
-    scan.angle_min = -M_PI/2.0;
-    scan.angle_max = +M_PI/2.0;
+    scan.angle_min = -M_PI/2.0*0.6;
+    scan.angle_max = +M_PI/2.0*0.6;
     scan.angle_increment = (scan.angle_max - scan.angle_min) / (double)(rangers_count - 1);
     scan.scan_time = 1.0 / read_frequency;
     scan.range_min = 0.10 + ir_ring_radius;
